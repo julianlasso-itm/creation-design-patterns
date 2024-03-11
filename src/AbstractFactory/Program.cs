@@ -1,11 +1,5 @@
 ﻿namespace AbstractFactory;
 
-enum TransportType
-{
-    Email,
-    WhatsApp
-}
-
 public class Program
 {
     private static IMessageFactory? s_factory;
@@ -26,7 +20,7 @@ public class Program
         {
             TransportType.Email => new EmailFactory(),
             TransportType.WhatsApp => new WhatsAppFactory(),
-            _ => throw new NotImplementedException()
+            _ => throw new NotSupportedException()
         };
     }
 }

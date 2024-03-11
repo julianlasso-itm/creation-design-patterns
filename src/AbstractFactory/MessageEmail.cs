@@ -7,7 +7,7 @@ public class MessageEmail : MessageBase
     public override void Send(String destination, String message)
     {
         LogMessage($"Send by Email: {message}");
-        _transport.For(destination);
-        _transport.Send(message);
+        Transport.MessageFor(destination);
+        Transport.SendMessage(message);
     }
 }

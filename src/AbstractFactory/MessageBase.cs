@@ -2,16 +2,16 @@ namespace AbstractFactory;
 
 public abstract class MessageBase : IMessage
 {
-    protected readonly TransportBase _transport;
+    protected readonly TransportBase Transport;
 
     public MessageBase(TransportBase transport)
     {
-        _transport = transport;
+        Transport = transport;
     }
 
     public abstract void Send(String destination, String message);
 
-    protected void LogMessage(String message)
+    protected static void LogMessage(String message)
     {
         Console.WriteLine($"Message: {message}");
     }
