@@ -2,11 +2,11 @@ namespace Builder;
 
 public class Order
 {
-    public EDishType DishType { get; }
-    public List<EAddition> Additions { get; }
-    public ESize Size { get; }
+    public DishType DishType { get; }
+    public List<Addition> Additions { get; }
+    public Size Size { get; }
 
-    public Order(EDishType dishType, List<EAddition> additions, ESize size)
+    public Order(DishType dishType, List<Addition> additions, Size size)
     {
         DishType = dishType;
         Additions = additions;

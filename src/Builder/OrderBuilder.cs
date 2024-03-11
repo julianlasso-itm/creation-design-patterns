@@ -2,24 +2,24 @@ namespace Builder;
 
 public class OrderBuilder : IOrderBuilder
 {
-    private EDishType _dishType;
-    private List<EAddition>? _additions;
-    private ESize _size;
+    private DishType _dishType;
+    private List<Addition>? _additions;
+    private Size _size;
 
-    public IOrderBuilder SetDishType(EDishType dishType)
+    public IOrderBuilder SetDishType(DishType dishType)
     {
         _additions = null;
         this._dishType = dishType;
         return this;
     }
 
-    public IOrderBuilder SetAdditions(List<EAddition> additions)
+    public IOrderBuilder SetAdditions(List<Addition> additions)
     {
         this._additions = additions;
         return this;
     }
 
-    public IOrderBuilder SetSize(ESize size)
+    public IOrderBuilder SetSize(Size size)
     {
         _size = size;
         return this;
@@ -27,6 +27,6 @@ public class OrderBuilder : IOrderBuilder
 
     public Order Build()
     {
-        return new Order(_dishType, _additions ?? new List<EAddition>(), _size);
+        return new Order(_dishType, _additions ?? new List<Addition>(), _size);
     }
 }

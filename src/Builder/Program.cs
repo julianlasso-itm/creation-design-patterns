@@ -6,15 +6,15 @@ public class Program
     {
         IOrderBuilder orderBuilder = new OrderBuilder();
         Order order = orderBuilder
-            .SetDishType(EDishType.PIZZA)
-            .SetAdditions(new List<EAddition> { EAddition.CHEESE, EAddition.ONION })
-            .SetSize(ESize.LARGE)
+            .SetDishType(DishType.PIZZA)
+            .SetAdditions(new List<Addition> { Addition.CHEESE, Addition.ONION })
+            .SetSize(Size.LARGE)
             .Build();
         Console.WriteLine(order.ToString());
 
         order = orderBuilder
-            .SetDishType(EDishType.PASTA)
-            .SetSize(ESize.SMALL)
+            .SetDishType(DishType.PASTA)
+            .SetSize(Size.SMALL)
             .Build();
         Console.WriteLine(order.ToString());
     }

@@ -1,6 +1,6 @@
 namespace Builder;
 
-public enum EAddition
+public enum Addition
 {
     CHEESE,
     TOMATO,

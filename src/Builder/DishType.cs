@@ -1,6 +1,6 @@
 namespace Builder;
 
-public enum EDishType
+public enum DishType
 {
     PIZZA,
     PASTA,

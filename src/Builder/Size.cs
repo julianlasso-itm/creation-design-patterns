@@ -1,6 +1,6 @@
 namespace Builder;
 
-public enum ESize
+public enum Size
 {
     SMALL,
     MEDIUM,
