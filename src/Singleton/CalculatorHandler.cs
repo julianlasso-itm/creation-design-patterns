@@ -5,7 +5,8 @@ public class CalculatorHandler
     private float Memory { get; set; }
     private static CalculatorHandler? s_instance;
 
-    private CalculatorHandler() {
+    private CalculatorHandler()
+    {
         Memory = 0;
     }
 
