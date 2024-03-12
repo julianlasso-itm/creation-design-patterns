@@ -1,6 +1,6 @@
-﻿using Singleton;
+﻿namespace  Singleton;
 
-public class Program {
+public static class Program {
     public static void Main() {
         CalculatorHandler calculator1 = CalculatorHandler.GetInstance();
 

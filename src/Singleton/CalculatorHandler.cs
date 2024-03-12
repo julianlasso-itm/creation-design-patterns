@@ -12,10 +12,7 @@ public class CalculatorHandler
 
     public static CalculatorHandler GetInstance()
     {
-        if (s_instance == null)
-        {
-            s_instance = new CalculatorHandler();
-        }
+        if (s_instance == null) s_instance = new CalculatorHandler();
         return s_instance;
     }
 
