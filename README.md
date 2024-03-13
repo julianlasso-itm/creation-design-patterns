@@ -32,6 +32,8 @@ Además, el sistema debe prevenir la creación de múltiples instancias de contr
 
 El sistema también requiere una interfaz sencilla que permita realizar operaciones de suma, resta, multiplicación, división y módulo, así como establecer un nuevo valor de cálculo y borrar el estado actual de memoria cuando sea necesario. Todo esto mientras se mantiene una estructura de programación clara y mantenible.
 
+![Singleton](./img/ClassDiagram-Singleton.drawio.png)
+
 ### Factory Method
 
 Se requiere desarrollar una aplicación que permita la creación de diferentes tipos de objetos de valor (Value Objects) con propiedades distintas: identificadores numéricos, nombres de entidades y estados de habilitación. Cada uno de estos objetos tiene reglas de validación únicas y formas de creación específicas; por ejemplo, los identificadores deben ser enteros positivos, los nombres deben tener una longitud que respete un mínimo y máximo establecido, y los estados de habilitación son valores booleanos.
@@ -42,6 +44,8 @@ Los objetos de valor serán usados en diferentes partes de la aplicación, lo qu
 
 La solución debe proporcionar una estructura que soporte la extensión y el mantenimiento eficiente del código, manteniendo un alto nivel de cohesión y bajo acoplamiento entre los diferentes componentes del sistema.
 
+![Factory Method](./img/ClassDiagram-Factory-Method.drawio.png)
+
 ### Abstract Factory
 
 Desarrolle una aplicación cuya funcionalidad principal es la de enviar mensajes a los usuarios, pero la forma de envío puede variar significativamente dependiendo de la preferencia del usuario o del contexto de uso. Algunos usuarios prefieren recibir notificaciones a través de correo electrónico, mientras que otros optan por mensajes de WhatsApp. Cada método de envío tiene su propia lógica y configuración, como el formato del mensaje y los detalles de la conexión.
@@ -50,6 +54,8 @@ Para mantener una arquitectura limpia y modular, la aplicación necesita ser cap
 
 La solución debe facilitar la extensión de los tipos de mensajes y su correspondiente lógica de envío de una manera estructurada, permitiendo que la aplicación determine dinámicamente cuál método de envío utilizar basándose en la configuración o las preferencias del usuario. La aplicación deberá proporcionar una interfaz unificada para enviar mensajes que pueda adaptarse a los distintos tipos de transporte de mensajes sin alterar el núcleo funcional del sistema.
 
+![Abstract Factory](./img/ClassDiagram-Abstract-Factory.drawio.png)
+
 ### Builder
 
 Una empresa de software está desarrollando un sistema de pedidos para un restaurante que ofrece una variedad de platos como pizzas, pastas, ensaladas y tacos. Cada plato puede personalizarse con diferentes adiciones como queso, tomate, lechuga, cebolla y pepinillos, y además puede tener diferentes tamaños: pequeño, mediano o grande. Los clientes suelen tener preferencias específicas y combinaciones complejas en sus pedidos, lo que requiere una forma flexible y clara de construir estos pedidos con múltiples atributos.
@@ -57,3 +63,5 @@ Una empresa de software está desarrollando un sistema de pedidos para un restau
 El sistema debe permitir a los usuarios construir un pedido paso a paso, seleccionando el tipo de plato, agregando las adiciones deseadas y eligiendo el tamaño, sin exponer la complejidad de la creación del pedido final al cliente. Esta solución también debe ser escalable para permitir la fácil incorporación de nuevos platos, adiciones o tamaños en el futuro.
 
 La solución debe ser capaz de manejar pedidos con diferentes combinaciones de atributos sin forzar al cliente a pasar por un proceso de creación de pedidos complicado o propenso a errores, proporcionando así una experiencia de usuario suave y eficiente al realizar pedidos personalizados. Además, el restaurante requiere que la representación del pedido final sea clara y detallada para facilitar la preparación y entrega precisa de los platos personalizados.
+
+![Builder](./img/ClassDiagram-Builder.drawio.png)
