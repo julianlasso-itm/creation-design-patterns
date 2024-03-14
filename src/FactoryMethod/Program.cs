@@ -2,9 +2,9 @@
 
 public static class Program
 {
-    static ValueObjectHandlerBase<int>? s_personIdHandler;
-    static ValueObjectHandlerBase<string>? s_personNameHandler;
-    static ValueObjectHandlerBase<bool>? s_personEnabledHandler;
+    private static ValueObjectHandlerBase<int>? s_personIdHandler;
+    private static ValueObjectHandlerBase<string>? s_personNameHandler;
+    private static ValueObjectHandlerBase<bool>? s_personEnabledHandler;
 
     public static void Configure(string typeValue)
     {
