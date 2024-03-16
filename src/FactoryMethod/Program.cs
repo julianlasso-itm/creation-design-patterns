@@ -2,22 +2,22 @@
 
 public static class Program
 {
-    private static ValueObjectHandlerBase<int>? s_personIdHandler;
-    private static ValueObjectHandlerBase<string>? s_personNameHandler;
-    private static ValueObjectHandlerBase<bool>? s_personEnabledHandler;
+    private static ValueObjectHandlerBase<int> PersonIdHandler;
+    private static ValueObjectHandlerBase<string> PersonNameHandler;
+    private static ValueObjectHandlerBase<bool> PersonEnabledHandler;
 
     public static void Configure(string typeValue)
     {
         switch (typeValue)
         {
             case "id":
-                s_personIdHandler = new IdValueObjectHandler();
+                PersonIdHandler = new IdValueObjectHandler();
                 break;
             case "name":
-                s_personNameHandler = new NameValueObjectHandler();
+                PersonNameHandler = new NameValueObjectHandler();
                 break;
             case "enabled":
-                s_personEnabledHandler = new EnabledValueObjectHandler();
+                PersonEnabledHandler = new EnabledValueObjectHandler();
                 break;
             default:
                 throw new ArgumentException("Invalid type value");
@@ -30,13 +30,13 @@ public static class Program
         Configure("name");
         Configure("enabled");
 
-        IValueObject<int>? personId = s_personIdHandler?.CreateValueObject(1);
-        IValueObject<string>? personName = s_personNameHandler?.CreateValueObject("John Doe");
-        IValueObject<bool>? personEnabled = s_personEnabledHandler?.CreateValueObject(true);
+        IValueObject<int>? personId = PersonIdHandler?.CreateValueObject(1);
+        IValueObject<string>? personName = PersonNameHandler?.CreateValueObject("John Doe");
+        IValueObject<bool>? personEnabled = PersonEnabledHandler?.CreateValueObject(true);
 
-        if (personId != null) s_personIdHandler?.ValidateValueObject(personId);
-        if (personName != null) s_personNameHandler?.ValidateValueObject(personName);
-        if (personEnabled != null) s_personEnabledHandler?.ValidateValueObject(personEnabled);
+        if (personId != null) PersonIdHandler?.ValidateValueObject(personId);
+        if (personName != null) PersonNameHandler?.ValidateValueObject(personName);
+        if (personEnabled != null) PersonEnabledHandler?.ValidateValueObject(personEnabled);
 
         Console.WriteLine("Person ID: " + personId?.GetValue());
         Console.WriteLine("Person Name: " + personName?.GetValue());

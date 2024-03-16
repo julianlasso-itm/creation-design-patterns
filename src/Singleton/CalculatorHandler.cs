@@ -3,7 +3,7 @@ namespace Singleton;
 public class CalculatorHandler
 {
     private float Memory { get; set; }
-    private static CalculatorHandler? s_instance;
+    private static CalculatorHandler? Instance;
 
     private CalculatorHandler()
     {
@@ -12,8 +12,8 @@ public class CalculatorHandler
 
     public static CalculatorHandler GetInstance()
     {
-        if (s_instance == null) s_instance = new CalculatorHandler();
-        return s_instance;
+        if (Instance == null) Instance = new CalculatorHandler();
+        return Instance;
     }
 
     public float GetResult()
